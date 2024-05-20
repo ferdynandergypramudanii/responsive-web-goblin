@@ -65,6 +65,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 2rem;
+  z-index: 900;
 }
 
 section {
@@ -80,7 +81,7 @@ section {
 
 .hero-text h1 {
   font-family: "Permanent Marker", cursive;
-  font-size: 45px;
+  font-size: 75px;
   line-height: 1;
   color: white;
   margin: 0 0 20px;
@@ -96,7 +97,7 @@ section {
 .hero-text p {
   color: white;
   font-size: 13px;
-  line-height: 1.9;
+  line-height: 1.5;
   margin-bottom: 40px;
 }
 
@@ -188,24 +189,31 @@ section {
 
 @media (max-width: 1340px) {
   .hero-img img {
-    width: 80%;
-    height: auto;
+    transition: all 0.3s ease;
+    width: 70%;
+    height: 100%;
   }
 
   .hero-text h1 {
-    font-size: 75px;
-    margin: 0 0 30px;
+    font-size: 45px;
+    margin: 0 0 15px;
   }
 
   .hero-text h5 {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .hero-text p {
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 1195px) {
   section {
-    padding: 0 3%;
+    padding: 0 5%;
     transition: 0.2s;
+    width: 100%;
   }
   .hero-text {
     padding-top: 115px;
@@ -214,17 +222,14 @@ section {
     text-align: center;
   }
   .hero-img img {
-    width: 560px;
+    width: 50%;
     height: auto;
   }
   .hero {
-    height: 100%;
     gap: 1 rem;
     grid-template-columns: 1fr;
   }
-  .icons {
-    display: none;
-  }
+  .icons,
   .scroll-down {
     display: none;
   }
@@ -239,8 +244,8 @@ section {
     position: absolute;
     top: 100%;
     right: -100%;
-    width: 300px;
-    height: 22vh;
+    width: 250px;
+    height: 273px;
     background: #4d9559;
     display: flex;
     align-items: center;
@@ -250,9 +255,9 @@ section {
   }
 
   .navlist a {
-    margin-left: 0;
     display: block;
     margin: 7px 0;
+    margin-left: 0;
   }
 
   .navlist.open {
@@ -260,9 +265,15 @@ section {
   }
 }
 
+/*set hero-text & button*/
 @media (max-width: 680px) {
+  .hero-text a {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
   .hero-img img {
-    width: 100%;
+    width: 85%;
     height: auto;
   }
 }

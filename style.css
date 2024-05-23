@@ -137,6 +137,7 @@ section {
   top: 50%;
   left: -5%;
   padding: 0 10%;
+  z-index: 1010;
   transform: translateY(-50%);
 }
 
@@ -150,13 +151,14 @@ section {
 
 .icons i:hover {
   color: #4d9559;
-  transform: translateY(-5px);
+  transform: translateY(-15%);
 }
 
 .scroll-down {
   position: absolute;
   bottom: 5%;
   right: 3%;
+  z-index: 1010;
 }
 
 .scroll-down i {
